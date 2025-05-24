@@ -54,22 +54,6 @@
 
 ---
 
-## 🗺️ **3. Struktur Folder (Direktori)**
-
-```
-/perpustakaan
-│
-├── /config             # Koneksi database
-├── /assets             # CSS, JS, gambar
-├── /views              # Tampilan halaman
-├── /controllers        # Logika aplikasi
-├── /models             # Query-query database
-├── /auth               # Login dan register
-├── /admin              # Halaman admin
-├── /member             # Halaman member
-├── index.php           # Routing utama
-```
-
 ---
 
 ## 🧑‍💻 **4. Fitur-fitur**
