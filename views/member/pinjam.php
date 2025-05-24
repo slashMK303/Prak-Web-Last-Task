@@ -1,9 +1,9 @@
 <?php
 session_start();
-require '../config/koneksi.php';
+require '../../config/koneksi.php';
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'member') {
-    header("Location: ../auth/login.php");
+    header("Location: ../../auth/login.php");
     exit;
 }
 

@@ -1,10 +1,10 @@
 <?php
-require '../config/koneksi.php';
+require '../../config/koneksi.php';
 session_start();
 
 // Cek apakah yang login adalah member
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'member') {
-    header('Location: ../login.php');
+    header('Location: ../../auth/login.php');
     exit;
 }
 
@@ -26,13 +26,16 @@ $result = $conn->query($query);
     <meta charset="UTF-8">
     <title>Riwayat Peminjaman</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>S
+</head>
 
 <body class="bg-gray-100 p-6">
+
+    <?php include 'member-dashboard.php'; ?>
+
     <div class="max-w-4xl mx-auto bg-white p-6 rounded shadow">
         <div class="flex justify-between mb-4">
             <h1 class="text-xl font-bold">Riwayat Peminjaman</h1>
-            <a href="../dashboard/member-dashboard.php" class="bg-gray-500 text-white px-4 py-2 rounded">← Kembali</a>
+            <a href="/views/member/member-dashboard.php" class="bg-gray-500 text-white px-4 py-2 rounded">← Kembali</a>
         </div>
 
         <table class="w-full border text-sm">

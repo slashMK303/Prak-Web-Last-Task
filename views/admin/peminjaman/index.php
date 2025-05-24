@@ -1,5 +1,5 @@
 <?php
-require '../config/koneksi.php';
+require '../../../config/koneksi.php';
 session_start();
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
     header('Location: ../login.php');
@@ -43,7 +43,7 @@ $result = $conn->query($query);
 
 <body class="p-6 bg-gray-100">
 
-    <?php include '../dashboard/admin-dashboard.php'; ?>
+    <?php include '../components/admin-dashboard.php'; ?>
 
     <div class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
         <div class="flex justify-between mb-4">
@@ -52,7 +52,7 @@ $result = $conn->query($query);
         </div>
 
         <div class="mb-4">
-            <a href="../dashboard/admin-dashboard.php" class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+            <a href="../../admin/components/admin-dashboard.php" class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
                 ← Kembali ke Dashboard
             </a>
         </div>

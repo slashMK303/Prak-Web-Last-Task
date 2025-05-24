@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if ($_SESSION["role"] !== "member") {
     header("Location: ../auth/login.php");
     exit;
@@ -25,7 +27,6 @@ if ($_SESSION["role"] !== "member") {
 
     <div class="space-x-4">
         <a href="../member/buku.php" class="bg-blue-500 text-white px-4 py-2 rounded">Lihat Buku</a>
-        <a href="../member/pinjam.php" class="bg-green-500 text-white px-4 py-2 rounded">Pinjam Buku</a>
         <a href="../member/riwayat_peminjaman.php" class="bg-blue-500 text-white px-4 py-2 rounded">Riwayat Peminjaman</a>
     </div>
 </body>

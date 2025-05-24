@@ -1,10 +1,10 @@
 <?php
-require '../config/koneksi.php';
+require '../../../config/koneksi.php';
 session_start();
 
 // Cek hanya admin yang bisa
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
-    header('Location: ../auth/login.php');
+    header('Location: ../../../auth/login.php');
     exit;
 }
 

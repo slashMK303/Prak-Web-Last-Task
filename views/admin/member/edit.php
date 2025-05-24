@@ -1,5 +1,5 @@
 <?php
-require '../config/koneksi.php';
+require '../../../config/koneksi.php';
 
 if (!isset($_GET['id'])) {
     header("Location: index.php");

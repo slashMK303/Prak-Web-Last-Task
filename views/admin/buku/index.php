@@ -4,7 +4,7 @@ if ($_SESSION["role"] !== "admin") {
     header("Location: ../auth/login.php");
     exit;
 }
-require '../config/koneksi.php';
+require '../../../config/koneksi.php';
 
 $buku = $conn->query("SELECT * FROM buku");
 ?>
@@ -20,7 +20,7 @@ $buku = $conn->query("SELECT * FROM buku");
 
 <body class="p-6 bg-gray-100">
 
-    <?php include '../dashboard/admin-dashboard.php'; ?>
+    <?php include '../components/admin-dashboard.php'; ?>
 
     <div class="max-w-5xl mx-auto bg-white p-6 rounded shadow">
         <div class="flex justify-between mb-4">
@@ -28,7 +28,7 @@ $buku = $conn->query("SELECT * FROM buku");
             <a href="tambah.php" class="bg-blue-500 text-white px-4 py-2 rounded">+ Tambah Buku</a>
         </div>
         <div class="mb-4">
-            <a href="../dashboard/admin-dashboard.php" class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+            <a href="../../admin/components/admin-dashboard.php" class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
                 ← Kembali ke Dashboard
             </a>
         </div>
@@ -39,6 +39,7 @@ $buku = $conn->query("SELECT * FROM buku");
                 <tr>
                     <th class="p-2 border">#</th>
                     <th class="p-2 border">Judul</th>
+                    <th class="p-2 border">Image</th>
                     <th class="p-2 border">Penulis</th>
                     <th class="p-2 border">Penerbit</th>
                     <th class="p-2 border">Tahun</th>
@@ -52,6 +53,7 @@ $buku = $conn->query("SELECT * FROM buku");
                     <tr>
                         <td class="p-2 border"><?= $no++ ?></td>
                         <td class="p-2 border"><?= $row["judul"] ?></td>
+                        <td class="p-2 border"><img src="../../../uploads/<?= $row['gambar'] ?>" width="50"></td>
                         <td class="p-2 border"><?= $row["penulis"] ?></td>
                         <td class="p-2 border"><?= $row["penerbit"] ?></td>
                         <td class="p-2 border"><?= $row["tahun"] ?></td>
