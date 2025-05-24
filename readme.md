@@ -1,4 +1,4 @@
-Berikut adalah **rancangan aplikasi perpustakaan berbasis website** menggunakan PHP, MySQL, JavaScript, dan Tailwind CSS, sesuai dengan kriteria yang kamu berikan:
+**rancangan aplikasi perpustakaan berbasis website** menggunakan PHP, MySQL, JavaScript, dan Tailwind CSS, sesuai dengan kriteria yang kamu berikan:
 
 ---
 
