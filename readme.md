@@ -1,4 +1,4 @@
-Berikut adalah **rancangan aplikasi perpustakaan berbasis website** menggunakan PHP, MySQL, JavaScript, dan Tailwind CSS, sesuai dengan kriteria yang kamu berikan:
+**rancangan aplikasi perpustakaan berbasis website** menggunakan PHP, MySQL, JavaScript, dan Tailwind CSS, sesuai dengan kriteria yang kamu berikan:
 
 ---
 
@@ -53,22 +53,6 @@ Berikut adalah **rancangan aplikasi perpustakaan berbasis website** menggunakan 
 | Member | Lihat buku, pinjam buku, lihat riwayat peminjaman pribadi      |
 
 ---
-
-## 🗺️ **3. Struktur Folder (Direktori)**
-
-```
-/perpustakaan
-│
-├── /config             # Koneksi database
-├── /assets             # CSS, JS, gambar
-├── /views              # Tampilan halaman
-├── /controllers        # Logika aplikasi
-├── /models             # Query-query database
-├── /auth               # Login dan register
-├── /admin              # Halaman admin
-├── /member             # Halaman member
-├── index.php           # Routing utama
-```
 
 ---
 
