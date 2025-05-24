@@ -32,7 +32,7 @@ $result = $conn->query($query);
     <div class="max-w-4xl mx-auto bg-white p-6 rounded shadow">
         <div class="flex justify-between mb-4">
             <h1 class="text-xl font-bold">Riwayat Peminjaman</h1>
-            <a href="../dashboard/member.php" class="bg-gray-500 text-white px-4 py-2 rounded">← Kembali</a>
+            <a href="../dashboard/member-dashboard.php" class="bg-gray-500 text-white px-4 py-2 rounded">← Kembali</a>
         </div>
 
         <table class="w-full border text-sm">

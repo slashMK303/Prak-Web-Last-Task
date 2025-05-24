@@ -21,7 +21,7 @@ $members = $conn->query("SELECT * FROM users WHERE role = 'member'");
 
 <body class="bg-gray-100 p-6">
 
-    <?php include '../dashboard/admin.php'; ?>
+    <?php include '../dashboard/admin-dashboard.php'; ?>
 
     <div class="max-w-5xl mx-auto bg-white p-6 rounded shadow">
         <div class="flex justify-between mb-4">
@@ -29,7 +29,7 @@ $members = $conn->query("SELECT * FROM users WHERE role = 'member'");
             <a href="tambah.php" class="bg-blue-500 text-white px-4 py-2 rounded">+ Tambah Member</a>
         </div>
         <div class="mb-4">
-            <a href="../dashboard/admin.php" class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+            <a href="../dashboard/admin-dashboard.php" class="inline-block bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
                 ← Kembali ke Dashboard
             </a>
         </div>
