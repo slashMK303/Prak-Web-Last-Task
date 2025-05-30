@@ -8,6 +8,6 @@ if (isset($_SESSION["role"])) {
     }
     exit;
 } else {
-    header("Location: auth/login.php");
+    header("Location: auth/register.php");
     exit;
 }

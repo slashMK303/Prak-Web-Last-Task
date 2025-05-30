@@ -22,7 +22,7 @@ $buku = $conn->query("SELECT * FROM buku");
 
     <?php include '../components/admin-dashboard.php'; ?>
 
-    <div class="max-w-5xl mx-auto bg-white p-6 rounded shadow">
+    <div class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
         <div class="flex justify-between mb-4">
             <h1 class="text-2xl font-bold">Data Buku</h1>
             <a href="tambah.php" class="bg-blue-500 text-white px-4 py-2 rounded">+ Tambah Buku</a>

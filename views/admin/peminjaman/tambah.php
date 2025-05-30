@@ -51,33 +51,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body class="bg-gray-100 p-6">
-    <div class="max-w-xl mx-auto bg-white p-6 rounded shadow">
-        <h1 class="text-xl font-bold mb-4">Tambah Peminjaman</h1>
-        <form method="post">
-            <div class="mb-3">
-                <label class="block font-medium">Member</label>
-                <select name="user_id" class="w-full border p-2 rounded">
-                    <?php foreach ($member as $m): ?>
-                        <option value="<?= $m['id'] ?>"><?= $m['nama'] ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label class="block font-medium">Buku</label>
-                <select name="buku_id" class="w-full border p-2 rounded">
-                    <?php foreach ($buku as $b): ?>
-                        <option value="<?= $b['id'] ?>"><?= $b['judul'] ?> (Stok: <?= $b['stok'] ?>)</option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label class="block font-medium">Tanggal Pinjam</label>
-                <input type="date" name="tanggal_pinjam" class="w-full border p-2 rounded" required>
-            </div>
-            <button class="bg-blue-500 text-white px-4 py-2 rounded">Simpan</button>
-            <a href="index.php" class="ml-2 text-gray-600">← Kembali</a>
-        </form>
-    </div>
+
+    <?php include '../components/admin-dashboard.php'; ?>
+
+    <center>
+        <div class="max-w-xl mx-auto bg-white p-6 rounded shadow">
+            <h1 class="text-xl font-bold mb-4">Tambah Peminjaman</h1>
+            <form method="post">
+                <div class="mb-3">
+                    <label class="block font-medium">Member</label>
+                    <select name="user_id" class="w-full border p-2 rounded">
+                        <?php foreach ($member as $m): ?>
+                            <option value="<?= $m['id'] ?>"><?= $m['nama'] ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="block font-medium">Buku</label>
+                    <select name="buku_id" class="w-full border p-2 rounded">
+                        <?php foreach ($buku as $b): ?>
+                            <option value="<?= $b['id'] ?>"><?= $b['judul'] ?> (Stok: <?= $b['stok'] ?>)</option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="block font-medium">Tanggal Pinjam</label>
+                    <input type="date" name="tanggal_pinjam" class="w-full border p-2 rounded" required>
+                </div>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Simpan</button>
+                <a href="index.php" class="ml-2 text-gray-600">← Kembali</a>
+            </form>
+        </div>
+    </center>
 </body>
 
 </html>

@@ -41,22 +41,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="p-6 bg-gray-100">
-    <h1 class="text-2xl font-bold mb-4">Tambah Buku</h1>
-    <form method="POST" enctype="multipart/form-data" class="space-y-4 bg-white p-4 rounded shadow w-96">
-        <input type="text" name="judul" placeholder="Judul" required class="w-full border p-2 rounded">
-        <input type="text" name="penulis" placeholder="Penulis" required class="w-full border p-2 rounded">
-        <input type="text" name="penerbit" placeholder="Penerbit" required class="w-full border p-2 rounded">
-        <input type="number" name="tahun" placeholder="Tahun" required class="w-full border p-2 rounded">
-        <input type="number" name="stok" placeholder="Stok" required class="w-full border p-2 rounded">
-        <div>
-            <label class="block mb-1">Gambar:</label>
-            <input type="file" name="gambar" accept="image/*" required class="block">
-        </div>
-        <div class="flex justify-between">
-            <a href="index.php" class="text-gray-600 underline">Kembali</a>
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Simpan</button>
-        </div>
-    </form>
+
+    <?php include '../components/admin-dashboard.php'; ?>
+
+    <center>
+        <h1 class="text-2xl font-bold mb-4">Tambah Buku</h1>
+        <form method="POST" enctype="multipart/form-data" class="space-y-4 bg-white p-4 rounded shadow w-96">
+            <input type="text" name="judul" placeholder="Judul" required class="w-full border p-2 rounded">
+            <input type="text" name="penulis" placeholder="Penulis" required class="w-full border p-2 rounded">
+            <input type="text" name="penerbit" placeholder="Penerbit" required class="w-full border p-2 rounded">
+            <input type="number" name="tahun" placeholder="Tahun" required class="w-full border p-2 rounded">
+            <input type="number" name="stok" placeholder="Stok" required class="w-full border p-2 rounded">
+            <div>
+                <label class="block mb-1">Gambar:</label>
+                <input type="file" name="gambar" accept="image/*" required class="block">
+            </div>
+            <div class="flex justify-between">
+                <a href="index.php" class="text-gray-600 underline">Kembali</a>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Simpan</button>
+            </div>
+        </form>
+    </center>
 </body>
 
 </html>

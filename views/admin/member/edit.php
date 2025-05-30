@@ -35,17 +35,22 @@ $member = $result->fetch_assoc();
 </head>
 
 <body class="bg-gray-100 p-6">
-    <div class="max-w-lg mx-auto bg-white p-6 rounded shadow">
-        <h2 class="text-xl font-bold mb-4">Edit Member</h2>
-        <form method="POST" class="space-y-3">
-            <input type="text" name="nama" value="<?= $member['nama'] ?>" required class="w-full border p-2 rounded">
-            <input type="email" name="email" value="<?= $member['email'] ?>" required class="w-full border p-2 rounded">
-            <div class="flex justify-between">
-                <a href="index.php" class="text-gray-500">Kembali</a>
-                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Update</button>
-            </div>
-        </form>
-    </div>
+
+    <?php include '../components/admin-dashboard.php'; ?>
+
+    <center>
+        <div class="max-w-lg mx-auto bg-white p-6 rounded shadow">
+            <h2 class="text-xl font-bold mb-4">Edit Member</h2>
+            <form method="POST" class="space-y-3">
+                <input type="text" name="nama" value="<?= $member['nama'] ?>" required class="w-full border p-2 rounded">
+                <input type="email" name="email" value="<?= $member['email'] ?>" required class="w-full border p-2 rounded">
+                <div class="flex justify-between">
+                    <a href="index.php" class="text-gray-500">Kembali</a>
+                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Update</button>
+                </div>
+            </form>
+        </div>
+    </center>
 </body>
 
 </html>
